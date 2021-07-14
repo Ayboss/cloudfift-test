@@ -1,16 +1,31 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
 
 function ShareStory() {
     const [fileobj, setFileobj] = useState([]);
-    const [submit, setSubmit] = useState(true);
+    const [submit, setSubmit] = useState(false);
     const handleFileChange = (e)=>{
         setFileobj(e.target.files[0])
+    }
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+        setSubmit(true);
+    }
+    const handleRadioChange = (e)=>{
+        console.log(e.target.value)
     }
     if(submit){
         return(
             <div className="story">
                 <div className="story__form">
-
+                    <div className="story__complete-box">
+                        <div className="story__complete">
+                            🎉
+                        </div>
+                        <h3 className="story__completeHeading">Thank you for sharing your story!</h3>
+                        <p className="story__completeText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <Link to="/" className="story__completeLink">Close</Link>
+                    </div>
                 </div>
             </div>
         )
@@ -47,14 +62,14 @@ function ShareStory() {
                 <div className="story__form-group">
                     <div className="story__radiogroup">
                         <p className="story__radiotext">What did you interact with Vasiti as?</p>
-                        <div className="story__radiobox">
+                        <div className="story__radiobox" onChange={handleRadioChange}>
                             <label className="story__radiolabel">
-                                <input type="radio" name="check"/>
-                                <span>Customer</span>
+                                <input value="yeahcheck" type="radio" name="check" className="story__radiotag" />
+                                <span className="story__radiospan">Customer</span>
                             </label>
                             <label className="story__radiolabel">
-                                <input type="radio" name="check"/>
-                                <span>Vendor</span>
+                                <input value="nahcheck" type="radio" name="check" className="story__radiotag"/>
+                                <span className="story__radiospan">Vendor</span>
                             </label>
                         </div>
                     </div>
@@ -64,7 +79,7 @@ function ShareStory() {
                     <input type="text" className="story__input"/>
                 </div>
                 <div className="story__buttondiv">
-                    <button className="story__button">
+                    <button className="story__button" onClick={handleSubmit}>
                         Share your story!
                     </button>
                 </div>
