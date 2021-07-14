@@ -1,0 +1,113 @@
+.story{
+    background-color: #888;
+    min-height: 100vh ;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+    padding: 2rem;
+}
+.story__form{
+    max-width: 52.7rem;
+    padding: 3rem;
+    border-radius: 1.6rem;
+    background-color: #fff;
+    color: #676767;
+}
+.story__heading{
+    font-size: 2.8rem;
+    color: #000;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+.story__form-group{
+    margin-bottom: 2.4rem;
+}
+.story__label{
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 13px;
+}
+.story__input{
+    background: rgba(254, 254, 254, 0.3);
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 2rem 2.4rem;
+    width: 100%;
+    outline: none;
+}
+.story__input:focus{
+    border-color: #FF5C00;
+    outline: none;
+}
+.story__file{
+    visibility: hidden;
+}
+.story__file-box{
+    background: rgba(254, 254, 254, 0.3);
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 2rem 2.4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.story__file-box--span{
+    color: #676767;
+    font-size: 1.6rem;
+}
+.story__form--grid{
+    display: grid;
+    grid-gap:2rem;
+    grid-template-columns: 1fr 1fr;
+}
+.story__textarea{
+    width: 100%;
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    padding: 2rem 2.4rem;
+    height: 111px;
+    resize: none;
+    outline: none;
+}
+.story__textarea:focus{
+    border-color: #FF5C00;
+    outline: none;
+}
+.story__radiogroup{
+    display: flex;
+    justify-content: space-between;
+}
+.story__radiotext{
+    font-size: 14px;
+    color: #676767;
+}
+.story__radiobox{
+    display: flex;
+}
+.story__radiolabel{
+    display: flex;
+    align-items: center;
+    margin-left: 1.6rem
+}
+.story__radiolabel span{
+    margin-left: 6px;
+    font-size: 1.4rem;
+    color: #242120;
+}
+.story__buttondiv{
+    display: flex;
+    justify-content: flex-end;
+}
+.story__button{
+    font-size: 2rem;
+    color: #fff;
+    border-radius: 8px;
+    padding: 2rem 4rem;
+    border: none;
+    background-color: #FF5C00;
+    box-shadow: 2px 8px 30px rgba(230, 83, 0, 0.18);
+    border-radius: 8px;
+}
