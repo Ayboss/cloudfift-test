@@ -82,6 +82,9 @@
 .footer__newsletter{
     font-size:14px;
 }
+.footer__icon{
+    margin-right: 7px;
+}
 @media  (max-width: 956px){
     .footer{
         overflow: hidden;

@@ -53,6 +53,7 @@
     font-size: 1.6rem;
     color: #474747;
     font-weight: 500;
+    white-space: pre-wrap;
 }
 
 /* Major person css */
